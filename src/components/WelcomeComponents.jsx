@@ -1,14 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import {
-  Flex,
-  Box,
-  Center,
-  Container,
-  Divider,
-  Heading,
-  Link,
-} from "@chakra-ui/react";
+import { Flex, Box, Divider, Heading } from "@chakra-ui/react";
 import "./styles.css";
 
 const WelcomePage = () => {
@@ -16,16 +8,18 @@ const WelcomePage = () => {
 
   return (
     <Flex direction="column" w="100vw" h="100vh" align="center">
-      <Box w="100%" p={4} color="white">
-        vai ser a nav
-      </Box>
       <Box mt="30px" mb="30px">
-        <Heading as="h2" size="2xl" alignText="center">
+        <Heading as="h2" size="2xl" alignText="center" color="#f0f8ff">
           the human's age of your pet
         </Heading>
       </Box>
-      <Divider orientation="horizontal" w="65%" borderBottomWidth="2px" />
-      <Heading as="h3" size="xl" mt="90px">
+      <Divider
+        orientation="horizontal"
+        w="65%"
+        borderBottomWidth="2px"
+        mb="20px"
+      />
+      <Heading as="h3" size="xl" mt="90px" color="#f0f8ff">
         what's your pet?
       </Heading>
       <Flex mt="65px" display="inline-flex">
