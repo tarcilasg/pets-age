@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { CalculatorCatContext } from "../Providers/calculatorCat";
 import NavBar from "./navBar";
+import FooterBar from "./Footer";
 
 import {
   Flex,
@@ -30,12 +31,18 @@ const CatCalculator = () => {
   useEffect(() => {
     setResult();
   }, [setResult]);
+  // w={[300, 400, 500]} do menor (celular) pro maior (televisão)
 
   return (
     <Flex direction="column" w="100vw" h="100vh" align="center">
       <NavBar />
-      <Box mt="90px" mb="30px">
-        <Heading as="h2" size="2xl" alignText="center" color="#f0f8ff">
+      <Box mt={["110px", "110px", "90px", "90px"]} mb={["30px"]}>
+        <Heading
+          as="h2"
+          size={["md", "lg", "lg", "xl", "2xl"]}
+          textAlign="center"
+          color="#f0f8ff"
+        >
           the human's age of your cat <Icon as={BsSuitHeart} w="20px" />
         </Heading>
       </Box>
@@ -45,13 +52,17 @@ const CatCalculator = () => {
         borderBottomWidth="2px"
         mb="20px"
       />
-      <Text fontSize="20px" mt="90px" color="#f0f8ff">
+      <Text
+        fontSize={["15px", "15px", "20px", "25px"]}
+        mt={["10px", "30px", "90px", "90px"]}
+        color="#f0f8ff"
+      >
         set yours cat age:
       </Text>
       <Flex mt="20px" mb="30px">
         <NumberInput
-          size="lg"
-          maxW={36}
+          size={["sm", "md", "md", "lg"]}
+          maxW={[100, 36, 36, 36]}
           color="#f0f8ff"
           defaultValue={ageValue}
           min={1}
@@ -66,10 +77,10 @@ const CatCalculator = () => {
           </NumberInputStepper>
         </NumberInput>
       </Flex>
-      <Flex mt="40px" display="inline-flex">
-        <Box pr="60px">
+      <Flex mt={["25px", "35px", "50px"]} display="inline-flex">
+        <Box pr={["20px", "40px", "80px", "130px"]}>
           <Button
-            letterSpacing="2px"
+            letterSpacing={["0px", "2px"]}
             _hover={{
               transform: "scale(1.07)",
             }}
@@ -88,7 +99,7 @@ const CatCalculator = () => {
             p="0 20px"
             color="white"
             fontSize="17px"
-            letterSpacing="2px"
+            letterSpacing={["0px", "2px"]}
             _hover={{
               bg: "#f54d3e",
               transition: "all 0.5s ease-in-out",
@@ -108,10 +119,10 @@ const CatCalculator = () => {
       <Flex>
         <Fade direction="bottom" in={isOpen}>
           <Box
-            p="20px 35px"
-            fontSize="25px"
+            p={["20px 22px", "20px 35px", "25px 50px"]}
+            fontSize={["22px", "22px", "25px", "30px"]}
             color="white"
-            mt="30px"
+            mt={["20px", "20px", "30px", "40px"]}
             bg="teal.500"
             rounded="md"
             shadow="md"
@@ -121,6 +132,7 @@ const CatCalculator = () => {
           </Box>
         </Fade>
       </Flex>
+      {/* <FooterBar /> */}
     </Flex>
   );
 };

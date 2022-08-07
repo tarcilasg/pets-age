@@ -5,11 +5,12 @@ import "./styles.css";
 
 const WelcomePage = () => {
   const navigate = useNavigate();
+  // w={[300, 400, 500]} do menor (celular) pro maior (televisão)
 
   return (
     <Flex direction="column" w="100vw" h="100vh" align="center">
-      <Box mt="30px" mb="30px">
-        <Heading as="h2" size="2xl" alignText="center" color="#f0f8ff">
+      <Box mt={["90px", "90px", "110px", "110px"]} mb={["30px"]}>
+        <Heading as="h2" size="2xl" textAlign="center" color="#f0f8ff">
           the human's age of your pet
         </Heading>
       </Box>
@@ -17,13 +18,13 @@ const WelcomePage = () => {
         orientation="horizontal"
         w="65%"
         borderBottomWidth="2px"
-        mb="20px"
+        mb={["0px", "20px", "20px"]}
       />
       <Heading as="h3" size="xl" mt="90px" color="#f0f8ff">
         what's your pet?
       </Heading>
       <Flex mt="65px" display="inline-flex">
-        <Box pr="60px">
+        <Box pr={["0px", "30px", "60px", "60px"]}>
           <button className="btn" onClick={() => navigate("/agecat")}>
             cat
           </button>

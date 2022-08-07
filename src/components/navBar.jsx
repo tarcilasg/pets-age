@@ -14,29 +14,25 @@ import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 
 const NavBar = () => {
   const navigate = useNavigate();
-
+  // w={[300, 400, 500]}
   return (
-    <Flex w="100vw" h="10vh">
+    <Flex w={["30vw", "50vw", "80vw", "100vw"]} h={["7px", "10vh"]}>
       <Box
         display={"flex"}
         direction="row"
         alignItems="center"
-        justifyContent="flex-end"
+        justifyContent={["center", "center", "center", "flex-end", "flex-end"]}
         w="100%"
-        pr="80px"
+        h={["7vh", "10vh"]}
+        pr={["0px", "0px", "40px", "40px", "80px"]}
         color="white"
       >
-        {/* <HStack spacing='24px'>
-        <Box w='70px' h='10' bg='teal.500' />
-        <Box w='170px' h='10' bg='teal.500' />
-        <Box w='180px' h='10' bg='teal.500' />
-      </HStack> */}
         <Stack spacing={7} direction="row" align="center">
           <Button
-            px="30px"
-            py="25px"
+            px={["0px", "10px", "20px", "30px"]}
+            py={["0px", "5px", "15px", "25px"]}
             variant="link"
-            fontSize="19px"
+            fontSize={["13px", "13px", "17px", "22px"]}
             _hover={{
               transform: "scale(1.15)",
             }}
@@ -45,10 +41,10 @@ const NavBar = () => {
             about project
           </Button>
           <Button
-            px="30px"
-            py="25px"
+            px={["0px", "10px", "20px", "30px"]}
+            py={["0px", "5px", "15px", "25px"]}
             variant="link"
-            fontSize="19px"
+            fontSize={["13px", "13px", "17px", "22px"]}
             _hover={{
               transform: "scale(1.15)",
             }}
@@ -69,7 +65,7 @@ const NavBar = () => {
             onClick={() => navigate("/")}
           >
             <Tooltip label="back to Home!">
-              <CloseIcon color="white" w={6} h={6} />
+              <CloseIcon color="white" w={[4, 5, 6, 6]} h={[4, 5, 6, 6]} />
             </Tooltip>
           </Button>
         </Stack>
