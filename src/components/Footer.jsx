@@ -7,7 +7,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-
+// https://chakra-templates.dev/page-sections/footer
 const FooterBar = () => {
   return (
     <Box

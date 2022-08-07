@@ -31,7 +31,6 @@ const CatCalculator = () => {
   useEffect(() => {
     setResult();
   }, [setResult]);
-  // w={[300, 400, 500]} do menor (celular) pro maior (televisão)
 
   return (
     <Flex direction="column" w="100vw" h="100vh" align="center">

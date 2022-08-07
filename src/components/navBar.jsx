@@ -14,7 +14,7 @@ import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 
 const NavBar = () => {
   const navigate = useNavigate();
-  // w={[300, 400, 500]}
+
   return (
     <Flex w={["30vw", "50vw", "80vw", "100vw"]} h={["7px", "10vh"]}>
       <Box
@@ -53,7 +53,6 @@ const NavBar = () => {
             about me
           </Button>
           <Button
-            // colorScheme="whiteAlpha"
             variant="ghost"
             color="white"
             _hover={{
